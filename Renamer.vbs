@@ -1,4 +1,7 @@
 ' Script to disable IPv6, Change Computer Name, Join Domain & Place in Specified OU
+'
+' by RaveMaker - http://ravemaker.net
+'
 ' ---------- Body
 RegResultStr = readfromRegistry("HKLM\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters\DisabledComponents", "Blank")
 If Not (RegResultStr = "-1") Then 
