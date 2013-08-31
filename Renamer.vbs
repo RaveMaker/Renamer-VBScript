@@ -37,6 +37,12 @@ Function joinADDomain
 	strDomainUser="user@domain.com"
 	strDomainPasswd="password"
 	strDomainName="DOMAIN"
+	VLAN1="228"
+	VLAN2="226"
+	VLAN1OU="Faculty"
+	VLAN2OU="Students"
+	VLAN1strOU = "OU=Faculty,OU=Workstations,DC=DOMAIN,DC=COM"
+	VLAN2strOU = "OU=Faculty,OU=Workstations,DC=DOMAIN,DC=COM"
 	Const JOIN_DOMAIN = 1
 	Const ACCT_CREATE = 2
 	Const ACCT_DOMAIN_JOIN_IF_JOINED = 32
@@ -69,15 +75,15 @@ Function joinADDomain
 				IPFinal = "0" & IPFinal
 			End If
 			
-			'Change Computer Name By IP And Select OU for example Students-10.0.226.0, Faculty-192.168.228.0
+			'Change Computer Name By IP And Select OU
 			Select Case VLAN
-			Case 228
-				strNewName = "Faculty" & IPFinal
-				strOU = "OU=Faculty,OU=Workstations,DC=DOMAIN,DC=COM"
+			Case VLAN1
+				strNewName = VLAN1OU & IPFinal
+				strOU = VLAN1strOU
 				Exit For
-			Case 226
-				strNewName = "Students" & IPFinal
-				strOU = "OU=Students,OU=Workstations,DC=DOMAIN,DC=COM"
+			Case VLAN2
+				strNewName = VLAN2OU & IPFinal
+				strOU = VLAN2strOU
 				Exit For
 			Case Else
 				msgbox ("Wrong VLAN - Contact Administrator")
