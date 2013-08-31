@@ -20,7 +20,7 @@ VB Script - Disable IPv6, Change Computer Name, Join Domain and Place in Specifi
  - VLAN1="228"
  - VLAN2="226"
 
-4. Use srvany.exe to create a service for it and set it for delayed start.
+4. Use "instsrv.exe","srvany.exe" to create a service for it and set it for delayed start.
 
 #### It will need 2 restarts to rename and join the computer to active directory.
 
