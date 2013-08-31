@@ -9,27 +9,19 @@ VB Script - Disable IPv6, Change Computer Name, Join Domain and Place in Specifi
 
 2. Edit the following AD variables:
 
-	strDomainUser="user@domain.com"
-	
-	strDomainPasswd="password"
-	
-	strDomainName="DOMAIN"
-	
-	VLAN1OU="Faculty"
-	
-	VLAN2OU="Students"
-	
-	VLAN1strOU = "OU=Faculty,OU=Workstations,DC=DOMAIN,DC=COM"
-	
-	VLAN2strOU = "OU=Faculty,OU=Workstations,DC=DOMAIN,DC=COM"
-	
+- strDomainUser="user@domain.com"
+- strDomainPasswd="password"
+- strDomainName="DOMAIN"
+- VLAN1OU="Faculty"
+- VLAN2OU="Students"
+- VLAN1strOU = "OU=Faculty,OU=Workstations,DC=DOMAIN,DC=COM"
+- VLAN2strOU = "OU=Faculty,OU=Workstations,DC=DOMAIN,DC=COM"
 
 3. Fill in VLAN for example (192.168.226.0,10.0.228.0):
 
 	VLAN1="228"
 
 	VLAN2="226"
-
 
 #### Use srvany.exe to create a service for it and set it for delayed start.
 
