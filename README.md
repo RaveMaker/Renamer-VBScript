@@ -5,7 +5,7 @@ VB Script - Disable IPv6, Change Computer Name, Join Domain and Place in Specifi
 
 ### Installation
 
-1. Clone this script from github or copy the files manually to your prefered directory.
+1. Clone this script from github or copy the files manually to your C:\Renamer
 
 2. Edit the following AD variables:
  - strDomainUser="user@domain.com"
@@ -20,7 +20,9 @@ VB Script - Disable IPv6, Change Computer Name, Join Domain and Place in Specifi
  - VLAN1="228"
  - VLAN2="226"
 
-4. Run the script at startup or use "instsrv.exe","srvany.exe" to create a service for it.
+### Use "instsrv.exe","srvany.exe" to create a service for it:
+1. The installation files assume folder location of C:\Renamer\ to change edit Install.cmd,Renamer.cmd,Renamer.reg
+2. Install.cmd will create service Called "Renamer" and will execute it at startup.
 
 #### It will need 2 restarts to rename and join the computer to active directory.
 
