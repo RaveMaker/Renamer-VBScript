@@ -27,6 +27,6 @@ VB Script - Disable IPv6, Change Computer Name, Join Domain and Place in Specifi
 
 #### It will need 2 restarts to rename and join the computer to active directory.
 
-by: [RaveMaker][RaveMaker].
+Author: [RaveMaker][RaveMaker].
 
 [RaveMaker]: http://ravemaker.net
